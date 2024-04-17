@@ -7,4 +7,5 @@ catboost
 xgboost
 dill
 pickle-mixin
+Flask
 #-e .
