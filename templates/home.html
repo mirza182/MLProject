@@ -1,15 +1,13 @@
 <html>
 <body>
-    <div class="login">
-       <h1>Student Exam Performance Indicator</h1>
+    <div class="login" style="text-align: center;">
+       <h1 style="color: #333;">Student Performance Prediction</h1>
    
-       <form action="{{ url_for('predict_datapoint')}}" method="post"> <!--From index.html-->
-        <h1>
-            <legend>Student Exam Performance Prediction</legend>
-        </h1>
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h2 style="color: #333;">Enter Student Details</h2>
         <div class="mb-3">
             <label class="form-label">Gender</label>
-            <select class="form-control" name="gender" placeholder="Enter you Gender" required>
+            <select class="form-control" name="gender" required>
                 <option class="placeholder" selected disabled value="">Select your Gender</option>
                 <option value="male">
                     Male
@@ -21,7 +19,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Race or Ethnicity</label>
-            <select class="form-control" name="ethnicity" placeholder="Enter you ethnicity" required>
+            <select class="form-control" name="ethnicity" required>
                 <option class="placeholder" selected disabled value="">Select Ethnicity</option>
                 <option value="group A">
                     Group A
@@ -42,46 +40,44 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Parental Level of Education</label>
-            <select class="form-control" name="parental_level_of_education"
-                placeholder="Enter you Parent Education" required>
+            <select class="form-control" name="parental_level_of_education" required>
                 <option class="placeholder" selected disabled value="">Select Parent Education</option>
                 <option value="associate's degree">
-                    associate's degree
+                    Associate's Degree
                 </option>
                 <option value="bachelor's degree">
-                    bachelor's degree
+                    Bachelor's Degree
                 </option>
                 <option value="high school">
-                    high school
+                    High School
                 </option>
                 <option value="master's degree">
-                    master's degree
+                    Master's Degree
                 </option>
                 <option value="some college">
-                    some college
+                    Some College
                 </option>
                 <option value="some high school">
-                    some high school
+                    Some High School
                 </option>
             </select>
         </div>
         <div class="mb-3">
             <label class="form-label">Lunch Type</label>
-            <select class="form-control" name="lunch" placeholder="Enter you Lunch" required>
+            <select class="form-control" name="lunch" required>
                 <option class="placeholder" selected disabled value="">Select Lunch Type</option>
                 <option value="free/reduced">
-                    free/reduced
+                    Free/Reduced
                 </option>
                 <option value="standard">
-                    standard
+                    Standard
                 </option>
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label">Test preparation Course</label>
-            <select class="form-control" name="test_preparation_course" placeholder="Enter you Course"
-                required>
-                <option class="placeholder" selected disabled value="">Select Test_course</option>
+            <label class="form-label">Test Preparation Course</label>
+            <select class="form-control" name="test_preparation_course" required>
+                <option class="placeholder" selected disabled value="">Select Test Course</option>
                 <option value="none">
                     None
                 </option>
@@ -92,20 +88,16 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Writing Score out of 100</label>
-            <input class="form-control" type="number" name="reading_score"
-                placeholder="Enter your Reading score" min='0' max='100' />
+            <input class="form-control" type="number" name="reading_score" min='0' max='100' />
         </div>
         <div class="mb-3">
             <label class="form-label">Reading Score out of 100</label>
-            <input class="form-control" type="number" name="writing_score"
-                placeholder="Enter your Reading Score" min='0' max='100' />
+            <input class="form-control" type="number" name="writing_score" min='0' max='100' />
         </div>
         <div class="mb-3">
             <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
         </div>
     </form>
-    <h2>
-       THE  prediction is {{results}}
-    </h2>
+    <h2 style="color: #333;">Prediction: {{results}}</h2>
    <body>
 </html>
